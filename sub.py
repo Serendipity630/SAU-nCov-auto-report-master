@@ -11,13 +11,13 @@ verify_cert = False
 
 # 全局变量
 #读取环境变量中的登录信息
-user = os.environ['SEP_USER_NAME']  # 学号
-passwd = os.environ['SEP_PASSWD']  # SAU密码
+user = "193406100111"  # 学号
+passwd = "yxz13342178972"  # SAU密码
 api_key = os.environ['API_KEY']  # server酱的api，填了可以微信通知打卡结果，不填没影响
-xingming = os.environ['XINGMING'] 
-telnum = os.environ['TELNUM'] 
-xueyuan = os.environ['XUEYUAN'] 
-sauid = os.environ['SAUID'] 
+xingming = "于锡泽"
+telnum = "18242595677"
+xueyuan = "国际工程师学院" 
+sauid = "28655"
 
 def login(s: requests.Session, username, password):
     payload = {
@@ -36,8 +36,8 @@ def submit(s: requests.Session):
         'xuehao': user,
         'shoujihao': telnum,
         'danweiyuanxi': xueyuan,
-        'dangqiansuozaishengfen': "河北省",
-        'dangqiansuozaichengshi': "秦皇岛市",
+        'dangqiansuozaishengfen': "辽宁省",
+        'dangqiansuozaichengshi': "丹东市",
         'shifouyuhubeiwuhanrenyuanmiqie': "否",
         'shifoujiankangqingkuang': "是", 
         'shifoujiechuguohubeihuoqitayou': "是",
@@ -46,9 +46,9 @@ def submit(s: requests.Session):
         'shentishifouyoubushizhengzhuan': "否",
         'shifouyoufare': "否",
         'qitaxinxi': "",
-        'tiwen': "36.2",
-        'tiwen1': "36.2",
-        'tiwen2': "36.2",
+        'tiwen': "36.5",
+        'tiwen1': "36.5",
+        'tiwen2': "36.5",
         'riqi': datetime.now(tz=pytz.timezone("Asia/Shanghai")).strftime("%Y-%m-%d"),
         'id': sauid}
 
